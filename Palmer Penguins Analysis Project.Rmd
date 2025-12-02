@@ -86,9 +86,9 @@ ggplot(data = Data_clean, mapping = aes(x = bill_length_mm, y = bill_depth_mm, c
 Finally, we look at the correlation between all numeric variables.
 ```{r}
 # Prepare Data
-numeric_col <- Data_clean[, c("bill_length_mm", "bill_depth_mm", 
+numeric_col = Data_clean[, c("bill_length_mm", "bill_depth_mm", 
                              "flipper_length_mm", "body_mass_g")]
-cor_matrix <- cor(numeric_col)
+cor_matrix = cor(numeric_col)
 
 # Plot Heatmap
 pheatmap(mat = cor_matrix, 
